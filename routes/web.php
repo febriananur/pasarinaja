@@ -34,6 +34,8 @@ Route::prefix('admin')->group(function () {
         Route::resource('/category', CategoryController::class, ['as' => 'admin']);
         //route product
         Route::resource('/product', ProductController::class, ['as' => 'admin']);
+        //route barangKeluar
+        Route::resource('/barangkeluar', BrgkeluarController::class, ['as' => 'admin']);
         //route order
         Route::resource('/order', OrderController::class, ['except' => ['create', 'store', 'edit', 'update', 'destroy'], 'as' => 'admin']);
         //route customer
