@@ -34,6 +34,7 @@ class ProductController extends Controller
     {
         $categories = Category::latest()->get();
         return view('admin.product.create', compact('categories'));
+
     }
     
     /**
@@ -68,7 +69,7 @@ class ProductController extends Controller
            'content'        => $request->content,
            'unit'           => $request->unit,
            'weight'         => $request->weight,
-           'stok'           => $request->stok,
+           'stok'           => $request->stok,  
            'price'          => $request->price,
            'discount'       => $request->discount,
            'keywords'       => $request->keywords,
@@ -90,6 +91,7 @@ class ProductController extends Controller
      * @param  mixed $product
      * @return void
      */
+    
     public function edit(Product $product)
     {
         $categories = Category::latest()->get();
@@ -154,7 +156,7 @@ class ProductController extends Controller
                 'unit'           => $request->unit,
                 'weight'         => $request->weight,
                 'stok'           => $request->stok,
-                'price'          => $request->price,
+                'price'          => $request->price,    
                 'discount'       => $request->discount,
                 'keywords'       => $request->keywords,
                 'description'    => $request->description
@@ -171,6 +173,9 @@ class ProductController extends Controller
     }
     
     /**
+     * 
+     * 
+     * 
      * destroy
      *
      * @param  mixed $id
